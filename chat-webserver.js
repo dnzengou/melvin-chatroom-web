@@ -6,6 +6,7 @@ var io = require('socket.io')(http);
 const Wit = require('node-wit').Wit;
 
 
+app.set('port', (process.env.PORT || 3000));
 
 // Wit.ai parameters
 const WIT_TOKEN = process.env.WIT_TOKEN || '6OLD24RCABCBZHU3YJRWTY2CAJ7UMOV6';
@@ -48,8 +49,8 @@ io.on('connection', function(socket){
   });
 });
 
-http.listen(3000, function(){
-  console.log('listening on *:3000');
+http.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
 });
 
 
