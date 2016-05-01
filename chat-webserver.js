@@ -17,6 +17,9 @@ app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
 });
 
+// io.set('transports', ['xhr-polling']);
+// io.set('polling duration', 30);
+
 io.on('connection', function(socket){
 	sockets[socket.id] = socket;
 	contexts[socket.id] = {context: {}};
