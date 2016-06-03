@@ -9,7 +9,7 @@ const Wit = require('node-wit').Wit;
 app.set('port', (process.env.PORT || 3000));
 
 // Wit.ai parameters
-const WIT_TOKEN = process.env.WIT_TOKEN || '6OLD24RCABCBZHU3YJRWTY2CAJ7UMOV6';
+const WIT_TOKEN = process.env.WIT_TOKEN || 'ETZEHQKSKBXI4HEWXXBBEPWMHG6CRQWN';
 const contexts = {};
 const sockets = {};
 
